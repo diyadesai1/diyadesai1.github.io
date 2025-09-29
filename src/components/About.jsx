@@ -1,5 +1,7 @@
 import { Card, CardContent } from './ui/card';
 import { Code, Palette, Lightbulb } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import headshot from '../assets/headshot.jpg';
 
 export function About() {
   const highlights = [
@@ -25,6 +27,16 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
+            <div className="flex justify-center mb-8">
+              <div className="relative">
+                <ImageWithFallback
+                  src={headshot}
+                  alt="Diya Desai - Professional Headshot"
+                  className="w-[20vw] h-[20vw] max-w-32 max-h-32 min-w-12 min-h-12 rounded-full overflow-hidden shadow-md"
+                />
+                <div className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-gray-500/70 scale-110" />
+              </div>
+            </div>
             <h2 className="text-3xl md:text-4xl mb-4">About Me</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I’m currently pursuing a B.S. in Computer Science at UCLA and thrive on turning complex problems into simple, elegant designs. I’m all about increasing inclusivity in the tech field and am always eager to learn new sofware. When I’m not coding, you’ll find me attempting (keyword!) to go on runs.
